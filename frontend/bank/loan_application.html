@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Moduck Bank | Loan Application</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Moduck Bank</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>User Admin</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="dashboard.html">Dashboard1</a></li>
+                      <li><a href="../production/index.html">Dashboard2</a></li>
+                      <!-- <li><a href="../production/index2.html">Dashboard2</a></li> -->
+                      <!-- <li><a href="../production/index3.html">Dashboard2</a></li> -->
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="loan_application.html">Credit Score</a></li>
+                      <li><a href="saving_deposit.html">Saving Deposit</a></li>
+                      <li><a href="transaction.html">Transaction</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li><a><i class="fa fa-table"></i> Database <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../production/loan_info.html">Loan Information</a></li>
+                      <li><a href="../production/savingdeposit_info.html">SavingDeposit Information</a></li>
+                    </ul>
+                  </li>
+                  <!-- <li><a><i class="fa fa-bar-chart-o"></i> Data Analysis <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../production/echarts.html">ECharts</a></li>
+                    </ul>
+                  </li> -->
+                </ul>
+              </div>
+              
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">User Admin
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>User Admin</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>User Admin</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>User Admin</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>User Admin</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Credit Score System</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Form Application <small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content" id="form">
+
+
+                    <!-- Smart Wizard -->
+                    <p>Fill in the necessary information to receive the borrower's credit score.</p>
+                    <div id="wizard" class="form_wizard wizard_horizontal">
+                      <ul class="wizard_steps">
+                        <li>
+                          <a href="#step-1">
+                            <span class="step_no">1</span>
+                            <span class="step_descr">
+                                              Step 1<br />
+                                              <small>Details Infomation</small>
+                                          </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-2">
+                            <span class="step_no">2</span>
+                            <span class="step_descr">
+                                              Step 2<br />
+                                              <small>Deposit Term</small>
+                                          </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-3">
+                            <span class="step_no">3</span>
+                            <span class="step_descr">
+                                              Step 3<br />
+                                              <small>Submit Application</small>
+                                          </span>
+                          </a>
+                        </li>
+                      </ul>
+                      <div id="step-1">
+                        <form class="form-horizontal form-label-left">
+
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="loan">LOAN ($)<span class="required">*</span></label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="number" id="loan" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="reason">REASON<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <!-- <input type="text" id="reason" required="required" class="form-control col-md-7 col-xs-12"> -->
+                              <select id="reason" required="required" class="form-control col-md-7 col-xs-12">
+                                <option value="">Reason</option>
+                                <option value="DebtCon">Debt Consolidation</option>
+                                <option value="HomeImp">Home Improvement</option>
+                                <option value="Other">Other reason</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="job">JOB<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                  <!-- <input type="text" id="job" required="required" class="form-control col-md-7 col-xs-12"> -->
+                                  <select id="job" required="required" class="form-control col-md-7 col-xs-12">
+                                    <option value="">Job</option>
+                                    <option value="Sales">Sales Job</option>
+                                    <option value="Self">Self Job</option>
+                                    <option value="Mgr">Manager Job</option>
+                                    <option value="Office">Office Job</option>
+                                    <option value="ProfExe">ProfExe Job</option>
+                                    <option value="Other">Other Job</option>
+                                  </select>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="yoj">YOJ (Years)<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                  <input type="number" id="yoj" required="required" class="form-control col-md-7 col-xs-12">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                      <div id="step-2">
+                        <form class="form-horizontal form-label-left">
+
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="period">PERIOD (Month)<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <!-- <input type="text" id="period" required="required" class="form-control col-md-7 col-xs-12"> -->
+                              <select id="period" required="required" class="form-control col-md-7 col-xs-12">
+                                <option value="">Period</option>
+                                <option value="One Month">One Month</option>
+                                <option value="Six Month">Six Month</option>
+                                <option value="Twelve Month">Twelve Month</option>
+                                <option value="Eighteen Month">Eighteen Month</option>
+                                <option value="Twenty-Four Month">Twenty-Four Month</option>
+                                <option value="Thirty Month">Thirty Month</option>
+                                <option value="Thirty-Six Month">Thirty-Six Month</option>
+                                <option value="Forty-Two Month">Forty-Two Month</option>
+                                <option value="Forty-Eight Month">Forty-Eight Month</option>
+                                <option value="Fifty-Four Month">Fifty-Four Month</option>
+                                <option value="Sixty Month">Sixty Month</option>
+                              </select>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div id="step-3"></div>
+                    </div>
+                    <!-- End SmartWizard Content -->
+                  </div>
+                  <div class="x_content" id="success" style="display:none">
+                    <div class="alert alert-success" role="alert">
+                      Application successfully submitted.
+                    </div>
+
+                    <div class="loader"></div>
+                  </div>
+                  <div class="x_content" id="report">
+                    <div class="panel panel-success">
+                      <div class="panel-heading text-center">Credit Report</div>
+                      <div class="panel-body text-center" style="height: 25rem;">
+                        <h1 style="margin-top: 10rem; display: none;" id="display_success">Score: <span class="badge" id="score" style="font-size: 2rem;"></span></h1>
+                        <h1 style="margin-top: 10rem; display: none;" id="display_failed">Missing Values</h1>
+                      </div>
+                    </div>
+                      
+                    <!-- /graph area -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            CreditSense - Redefining Credit
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- jQuery Smart Wizard -->
+    <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+    <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+    <!-- jquery.inputmask -->
+    <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+
+    <!-- morris.js -->
+    <script src="../vendors/raphael/raphael.min.js"></script>
+    <script src="../vendors/morris.js/morris.min.js"></script>
+
+  </body>
+</html>
+<style>
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin:auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+<script>
+  // Gửi yêu cầu tới API và xử lý dữ liệu nhận về score và lưu info
+
+  function submitApplication() {
+    const loan = parseInt(document.getElementById('loan').value);
+    const reason = document.getElementById('reason').value;
+    const job = document.getElementById('job').value;
+    const yoj = parseFloat(document.getElementById('yoj').value);
+
+    const period = document.getElementById('period').value;
+
+    // Get username login
+    const username = localStorage.getItem('username');
+
+    if (loan !== null && reason !== "" && job !== "" && yoj !== null && period !== "" && username !== "") {
+
+          axios.post('http://127.0.0.1:8000/api/credit_score', { 
+                                                  username: username,
+                                                  loan: loan, 
+                                                  reason: reason,
+                                                  job: job, 
+                                                  yoj: yoj,
+                                                  period: period
+                                                })
+
+          .then(response => {
+            const data = response.data;
+            const score = document.getElementById('score');
+            if (data.response == true) {
+              score.innerHTML = `${data.score}`;
+            } else {
+              alert('Error handling system!')
+            }
+          })
+          .catch(error => {
+            console.log('Error:', error);
+          });
+
+          document.getElementById('display_success').style.display = 'block';
+          document.getElementById('display_failed').style.display = 'none';
+
+        }
+
+    else {
+          document.getElementById('display_success').style.display = 'none';
+          document.getElementById('display_failed').style.display = 'block';
+    }
+    
+
+    console.log('Finish button pressed.');
+    $('#form').hide();
+    $('#success').show();
+    setTimeout(function() {
+      $('#report').show();
+      $('#success').hide();
+    }, 2000);
+
+  }
+
+  $('#wizard').smartWizard({
+    onFinish: submitApplication // triggers when Finish button is clicked
+  });
+
+  $(function() {
+    list = [
+      'id',
+      'dti',
+      'inq_last_6mths',
+      'open_acc',
+      'emp_length_num',
+      'revol_util',
+      'grade',
+      'payment_inc_ratio',
+      'purpose',
+      'delinq_2yrs_zero',
+      'pub_rec_zero',
+      'pub_rec',
+      'short_emp',
+      'home_ownership',
+      'sub_grade_num',
+      'last_major_derog_none',
+      'last_delinq_none',
+      'delinq_2yrs'
+    ];
+
+    var obj = {
+      id: 'A111112(4)',
+      member_id: '1296599',
+      loan_amnt: '5000',
+      funded_amnt: '5000',
+      funded_amnt_inv: '4975',
+      term: ' 36 months',
+      int_rate: '10.65',
+      installment: '162.87',
+      grade: 'B',
+      sub_grade: 'B2',
+      emp_title: '',
+      emp_length: '10+ years',
+      home_ownership: 'RENT',
+      annual_inc: '24000',
+      is_inc_v: 'Verified',
+      issue_d: '20111201T000000',
+      loan_status: 'Fully Paid',
+      pymnt_plan: 'n',
+      url: 'https://www.lendingclub.com/browse/loanDetail.action?loan_id=1077501',
+      desc:
+        '  Borrower added on 12/22/11 > I need to upgrade my business technologies.<br>',
+      purpose: '',
+      title: 'Computer',
+      zip_code: '860xx',
+      addr_state: 'AZ',
+      dti: '27.65',
+      delinq_2yrs: '0',
+      earliest_cr_line: '19850101T000000',
+      inq_last_6mths: '1',
+      mths_since_last_delinq: '',
+      mths_since_last_record: '',
+      open_acc: '3',
+      pub_rec: '0',
+      revol_bal: '13648',
+      revol_util: '83.7',
+      total_acc: '9',
+      initial_list_status: 'f',
+      out_prncp: '0',
+      out_prncp_inv: '0',
+      total_pymnt: '5861.07',
+      total_pymnt_inv: '5831.78',
+      total_rec_prncp: '5000',
+      total_rec_int: '861.07',
+      total_rec_late_fee: '0',
+      recoveries: '0',
+      collection_recovery_fee: '0',
+      last_pymnt_d: '20150101T000000',
+      last_pymnt_amnt: '171.62',
+      next_pymnt_d: '',
+      last_credit_pull_d: '20150101T000000',
+      collections_12_mths_ex_med: '0',
+      mths_since_last_major_derog: '',
+      policy_code: '1',
+      not_compliant: '0',
+      status: 'Fully Paid',
+      inactive_loans: '1',
+      bad_loans: '0',
+      emp_length_num: '11',
+      grade_num: '5',
+      sub_grade_num: '0.4',
+      delinq_2yrs_zero: '1',
+      pub_rec_zero: '1',
+      collections_12_mths_zero: '1',
+      short_emp: '0',
+      payment_inc_ratio: '8.1435',
+      final_d: '20141201T000000',
+      last_delinq_none: '1',
+      last_record_none: '1',
+      last_major_derog_none: '1'
+    };
+
+    $.each(list, function(key, requirement) {
+      console.log(obj[requirement]);
+      $('#' + requirement).val(obj[requirement]);
+    });
+    $(function() {
+      $('#report').hide();
+    });
+  });
+</script>

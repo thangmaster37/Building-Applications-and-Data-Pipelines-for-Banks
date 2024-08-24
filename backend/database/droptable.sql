@@ -1,0 +1,10 @@
+drop table card;
+drop table savingdeposit;
+drop table loan;
+drop table moneytransaction;
+drop table accountpayment;
+drop table accountinfo;
+drop table profileuser;
+drop table credithistory;
+drop table bank;
+drop table payment_type;

@@ -1,0 +1,72 @@
+Bộ dữ liệu HMEQ báo cáo các đặc điểm và thông tin về sự vi phạm đối với 5.960 khoản vay vốn chủ sở hữu nhà. 
+Khoản vay vốn chủ sở hữu nhà là một khoản vay mà người vay sử dụng giá trị vốn chủ sở hữu của ngôi nhà làm tài
+sản thế chấp. Bộ dữ liệu có các đặc điểm sau:
+-BAD: 1 = người nộp đơn đã vỡ nợ hoặc nợ quá hạn nghiêm trọng; 0 = người nộp đơn đã thanh toán khoản vay 
+-LOAN: Số tiền yêu cầu vay
+-MORTDUE: Số tiền nợ còn lại trên khoản thế chấp hiện tại
+-VALUE: Giá trị tài sản hiện tại.
+-REASON: lý do vay DebtCon = debt consolidation (ghép nợ); HomeImp = home improvement (sửa sang nhà cửa).
+-JOB: loại công việc, bao gồm các nhóm “Office”, “Sales”, “Mananger”, “Professional Executive”, “Self business” và các công việc khác.
+-YOJ: Số năm làm việc tại công việc hiện tại
+-DEROG: Số lượng báo cáo vỡ nợ.
+-DELINQ: Số hạn mức tín dụng quá hạn
+-CLAGE:Tuổi của hạn mức tín dụng lâu nhất tính theo tháng
+-NINQ: Số lượng yêu cầu tín dụng gần đây
+-CLNO: Số lượng hạn mức tín dụng
+-DEBTINC: Tỷ lệ nợ/thu nhập
+
+LogiRegression: auc = 0.72, acc_train = 0.84, acc_test = 0.85, recall_1 = 0.25
+DecisionTree: auc = 0.77, acc_train = 0.95, acc_test = 0.86, recall_1 = 0.52
+RandomForest: auc = 0.79, acc_train = 0.84, acc_test = 0.84, recall_1 = 0.15
+SVM: auc = 0.96, acc_train = 0.99, acc_test = 0.85, recall_1 = 0.22
+ExtraTrees: auc = 0.97, acc_train = 1, acc_test = 0.9, recall_1 = 0.51
+GradientBoosting: auc = 0.92, acc_train = 1, acc_test = 0.91, recall_1 = 0.57
+AdaBoost: auc = 0.84, acc_train = 0.88, acc_test = 0.87, recall_1 = 0.43
+
+LogiRegression: auc = 0.81, acc_train = 0.85, acc_test = 0.85, recall_1 = 0.35
+DecisionTree: auc = 0.71, acc_train = 0.98, acc_test = 0.87, recall_1 = 0.42
+RandomForest: auc = 0.88, acc_train = 0.93, acc_test = 0.84, recall_1 = 0.16
+SVM: auc = 0.98, acc_train = 1, acc_test = 0.91, recall_1 = 0.55
+ExtraTrees: auc = 0.98, acc_train = 1, acc_test = 0.92, recall_1 = 0.58
+GradientBoosting: auc = 0.89, acc_train = 1, acc_test = 0.86, recall_1 = 0.28
+AdaBoost: auc = 0.84, acc_train = 0.96, acc_test = 0.86, recall_1 = 0.23
+
+LogiRegression: auc = 0.81, acc_train = 0.86, acc_test = 0.85, recall_1 = 0.35
+DecisionTree: auc = 0.73, acc_train = 0.98, acc_test = 0.87, recall_1 = 0.42
+RandomForest: auc = 0.88, acc_train = 0.93, acc_test = 0.84, recall_1 = 0.14
+SVM: auc = 0.98, acc_train = 1, acc_test = 0.91, recall_1 = 0.51
+ExtraTrees: auc = 0.98, acc_train = 1, acc_test = 0.92, recall_1 = 0.56
+GradientBoosting: auc = 0.9, acc_train = 1, acc_test = 0.87, recall_1 = 0.32
+AdaBoost: auc = 0.84, acc_train = 0.96, acc_test = 0.86, recall_1 = 0.23
+
+LogiRegression: auc = 0.73, acc_train = 0.84, acc_test = 0.84, recall_1 = 0.28
+DecisionTree: auc = 0.77, acc_train = 0.93, acc_test = 0.86, recall_1 = 0.33
+RandomForest: auc = 0.81, acc_train = 0.86, acc_test = 0.83, recall_1 = 0.06
+SVM: auc = 0.98, acc_train = 0.99, acc_test = 0.88, recall_1 = 0.38
+ExtraTrees: auc = 0.98, acc_train = 1, acc_test = 0.93, recall_1 = 0.6
+GradientBoosting: auc = 0.93, acc_train = 1, acc_test = 0.9, recall_1 = 0.46
+AdaBoost: auc = 0.84, acc_train = 0.91, acc_test = 0.86, recall_1 = 0.22
+
+LogiRegression: auc = 0.73, acc_train = 0.84, acc_test = 0.84, recall_1 = 0.26
+DecisionTree: auc = 0.78, acc_train = 0.93, acc_test = 0.85, recall_1 = 0.33
+RandomForest: auc = 0.81, acc_train = 0.87, acc_test = 0.83, recall_1 = 0.1
+SVM: auc = 0.98, acc_train = 0.99, acc_test = 0.89, recall_1 = 0.39
+ExtraTrees: auc = 0.98, acc_train = 1, acc_test = 0.92, recall_1 = 0.59
+GradientBoosting: auc = 0.93, acc_train = 1, acc_test = 0.89, recall_1 = 0.4
+AdaBoost: auc = 0.84, acc_train = 0.91, acc_test = 0.86, recall_1 = 0.22
+
+LogiRegression: auc = 0.73, acc_train = 0.84, acc_test = 0.84, recall_1 = 0.3
+DecisionTree: auc = 0.77, acc_train = 0.93, acc_test = 0.86, recall_1 = 0.32
+RandomForest: auc = 0.81, acc_train = 0.86, acc_test = 0.83, recall_1 = 0.07
+SVM: auc = 0.88, acc_train = 0.91, acc_test = 0.9, recall_1 = 0.48
+ExtraTrees: auc = 0.98, acc_train = 1, acc_test = 0.92, recall_1 = 0.6
+GradientBoosting: auc = 0.92, acc_train = 1, acc_test = 0.89, recall_1 = 0.45
+AdaBoost: auc = 0.84, acc_train = 0.91, acc_test = 0.85, recall_1 = 0.22
+
+LogiRegression: auc = 0.75, acc_train = 0.84, acc_test = 0.83, recall_1 = 0.29
+DecisionTree: auc = 0.81, acc_train = 0.96, acc_test = 0.88, recall_1 = 0.57
+RandomForest: auc = 0.79, acc_train = 0.84, acc_test = 0.84, recall_1 = 0.19
+SVM: auc = 0.99, acc_train = 1, acc_test = 0.97, recall_1 = 0.84
+ExtraTrees: auc = 0.99, acc_train = 1, acc_test = 0.94, recall_1 = 0.69
+GradientBoosting: auc = 0.96, acc_train = 1, acc_test = 0.93, recall_1 = 0.67
+AdaBoost: auc = 0.83, acc_train = 0.88, acc_test = 0.87, recall_1 = 0.4

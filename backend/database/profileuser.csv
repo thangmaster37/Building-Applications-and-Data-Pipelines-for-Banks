@@ -1,0 +1,11 @@
+profileID,firstname,middlename,lastname,gender,ward,district,city,dateOfBirth,citizenID
+1,nguyen,van,thang,male,lien ha,dan phuong,ha noi,7/3/2003,001203018288
+2,nguyen,thu,huong,female,tan hoi,dan phuong,ha noi,6/29/2005,001203012906
+3,nguyen,van,huy,male,lien ha,dan phuong,ha noi,3/3/2005,001203010303
+4,nguyen,thuy,linh,female,lien ha,dan phuong,ha noi,8/16/2003,001203011608
+5,nguyen,thu,ha,female,truong chinh,dan phuong,ha noi,10/14/2003,001203011410
+6,dinh,van,tuan,male,truong chinh,thanh xuan,ha noi,4/5/2000,001203010504
+7,pham,van,thuan,male,lien trung,dan phuong,ha noi,6/12/2003,001203011206
+8,nguyen,thi,nguyet,female,lien trung,dan phuong,ha noi,7/25/2003,001203012507
+9,nguyen,huu,thinh,male,hong ha,dan phuong,ha noi,4/21/2003,001203012104
+10,nguyen,van,tien,male,tan lap,dan phuong,ha noi,2/10/2002,001203011002

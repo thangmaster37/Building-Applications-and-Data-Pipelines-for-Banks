@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./airflow-pipeline/plugins",
+        "./airflow-pipeline",
+        "./airflow-pipeline/dags",
+        "./airflow-pipeline/plugins/operators/load"
+    ]
+}
