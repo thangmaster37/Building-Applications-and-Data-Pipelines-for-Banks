@@ -23,6 +23,12 @@ collateral. The dataset has the following characteristics:
 
 ## 🛠️ 3.BUILD DOCKER AND CONNECTION
 
+In the airflow-pipeline directory run: docker-compose up -d --build
+![UI](docker.png)
+
+To connect Apache Airlfow with Apache Spark, in the Airflow transaction select Admin, then select Connections and create a connection as shown below.
+![UI](conn_airflow_spark.png)
+
 
 
 
