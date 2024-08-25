@@ -35,9 +35,9 @@ To process data from the website, just activate it on the Apache Airflow interfa
 
 To process data from logs collected from monitoring APIs, you need to install ELK Stack and run as follows:
 
-- Move to elasticsearch directory and run: <strong>bin\elasticsearch.bat<\strong>
-- Move to kibana directory and run: <strong>bin\kibana.bat<\strong>
-- Move to logstash directory and run: <strong>bin/logstash -f /path/to/your/logstash.conf<\strong>
+- Move to elasticsearch directory and run: <strong>bin\elasticsearch.bat</strong>
+- Move to kibana directory and run: <strong>bin\kibana.bat</strong>
+- Move to logstash directory and run: <strong>bin/logstash -f /path/to/your/logstash.conf</strong>
 
 To use kafka for real time fraud transaction alert run as follows:
 
@@ -64,6 +64,10 @@ To use kafka for real time fraud transaction alert run as follows:
 ![UI](data_pipeline.png)
 
 ## 📝 6.RESULT
+
+Model for Credit Scoring Problem
+
+![UI](svc_max.png)
 
 Data Pipeline
 
