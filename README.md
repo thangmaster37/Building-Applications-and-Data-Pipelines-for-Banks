@@ -7,19 +7,19 @@ In this project, I built a website that serves some basic banking functions. My 
 The HMEQ dataset reports characteristics and default information for 5,960 home equity loans. A home equity loan is a loan in which the borrower uses the equity value of the home as
 collateral. The dataset has the following characteristics:
 
--**BAD**: 1 = the applicant is in default or seriously delinquent; 0 = the applicant has paid the loan
--**LOAN**: Amount of loan requested
--**MORTDUE**: Amount of outstanding debt on the current mortgage
--**VALUE**: Current value of the property.
--**REASON**: Reason for the loan DebtCon = debt consolidation; HomeImp = home improvement.
--**JOB**: job type, including the groups “Office”, “Sales”, “Mananger”, “Professional Executive”, “Self business” and other jobs.
--**YOJ**: Number of years at current job
--**DEROG**: Number of reported defaults.
--**DELINQ**: Number of delinquent credit lines
--**CLAGE**: Age of oldest credit line in months
--**NINQ**: Number of recent credit requests
--**CLNO**: Number of credit lines
--**DEBTINC**: Debt-to-income ratio
+- **BAD**: 1 = the applicant is in default or seriously delinquent; 0 = the applicant has paid the loan
+- **LOAN**: Amount of loan requested
+- **MORTDUE**: Amount of outstanding debt on the current mortgage
+- **VALUE**: Current value of the property.
+- **REASON**: Reason for the loan DebtCon = debt consolidation; HomeImp = home improvement.
+- **JOB**: job type, including the groups “Office”, “Sales”, “Mananger”, “Professional Executive”, “Self business” and other jobs.
+- **YOJ**: Number of years at current job
+- **DEROG**: Number of reported defaults.
+- **DELINQ**: Number of delinquent credit lines
+- **CLAGE**: Age of oldest credit line in months
+- **NINQ**: Number of recent credit requests
+- **CLNO**: Number of credit lines
+- **DEBTINC**: Debt-to-income ratio
 
 ## 🛠️ 3.BUILD DOCKER AND CONNECTION
 
