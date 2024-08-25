@@ -59,7 +59,7 @@ To use kafka for real time fraud transaction alert run as follows:
 
 - <strong>python producer.py</strong>
 
-### ✅ 5.Workflow
+### ✅ 5.WORKFLOW
 
 ![UI](data_pipeline.png)
 
