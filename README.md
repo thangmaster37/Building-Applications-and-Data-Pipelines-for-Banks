@@ -35,6 +35,43 @@ To process data from the website, just activate it on the Apache Airflow interfa
 
 To process data from logs collected from monitoring APIs, you need to install ELK Stack and run as follows:
 
+- Move to elasticsearch directory and run: <strong>bin\elasticsearch.bat<\strong>
+- Move to kibana directory and run: <strong>bin\kibana.bat<\strong>
+- Move to logstash directory and run: <strong>bin/logstash -f /path/to/your/logstash.conf<\strong>
+
+To use kafka for real time fraud transaction alert run as follows:
+
+- .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties  <!-- Start the Zookeeper server -->
+
+- .\bin\windows\kafka-server-start.bat .\config\server.properties <!-- Start the Kafka server -->
+
+- .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic “test” 
+
+- .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic “test”
+
+- .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic “test”
+
+- .\bin\windows\kafka-console-consumer.bat --topic “test” --bootstrap-server localhost:9092 --from-beginning
+
+- streamlit run consumer.py
+
+- python consumer.py
+
+- python producer.py
+
+## ✅ 5.Workflow
+
+![UI](data_pipeline.png)
+
+## 📝 6.RESULT
+
+Data Pipeline
+
+![UI](dag.png)
+
+Run Dag
+
+![UI](run_dag.png)
 
 
 
