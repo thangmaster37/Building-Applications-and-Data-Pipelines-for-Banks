@@ -81,7 +81,7 @@ Data Analysis in Data Warehouse
 
 ![UI](dashboard.png)
 
-### 🚨 7.Conclusion
+### 🚨 7.CONCLUSION
 
 The project is essentially complete, however, there are constraints in terms of resources and funding, which have led to some changes in the implementation strategy to optimize costs while still ensuring the effectiveness of the project.
 
