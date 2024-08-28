@@ -29,7 +29,11 @@ In the airflow-pipeline directory run: <strong>docker-compose up -d --build</str
 To connect Apache Airlfow with Apache Spark, in the Airflow transaction select Admin, then select Connections and create a connection as shown below.
 ![UI](conn_airflow_spark.png)
 
-### 🔥 4.HOW TO RUN
+### ⭐️ 4. DATABASE DESIGN
+
+![UI](csdl.png)
+
+### 🔥 5.HOW TO RUN
 
 To process data from the website, just activate it on the Apache Airflow interface.
 
@@ -59,11 +63,11 @@ To use kafka for real time fraud transaction alert run as follows:
 
 - <strong>python producer.py</strong>
 
-### ✅ 5.WORKFLOW
+### ✅ 6.WORKFLOW
 
 ![UI](data_pipeline.png)
 
-### 📝 6.RESULT
+### 📝 7.RESULT
 
 Model for Credit Scoring Problem
 
@@ -77,11 +81,15 @@ Run Dag
 
 ![UI](run_dag.png)
 
+Log data on Elasticsearch
+
+![UI](elasticsearch_logs.png)
+
 Data Analysis in Data Warehouse
 
 ![UI](dashboard.png)
 
-### 🚨 7.CONCLUSION
+### 🚨 8.CONCLUSION
 
 The project is essentially complete, however, there are constraints in terms of resources and funding, which have led to some changes in the implementation strategy to optimize costs while still ensuring the effectiveness of the project.
 
