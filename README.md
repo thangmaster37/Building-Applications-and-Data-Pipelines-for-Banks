@@ -81,6 +81,10 @@ Run Dag
 
 ![UI](run_dag.png)
 
+Data Warehouse
+
+![UI](data_warehouse.png)
+
 Log data on Elasticsearch
 
 ![UI](elasticsearch_logs.png)
